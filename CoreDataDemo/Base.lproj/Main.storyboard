@@ -9,7 +9,7 @@
         <!--To-do-list-->
         <scene sceneID="Ygm-Mn-tXD">
             <objects>
-                <tableViewController id="J4E-7b-YyJ" customClass="TableViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="J4E-7b-YyJ" customClass="TableViewController" customModule="CoreDataDemo" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3a1-Jb-WQW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,13 +29,21 @@
                             <outlet property="delegate" destination="J4E-7b-YyJ" id="kZg-aO-uSN"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem systemItem="add" id="ZAx-TN-hJq">
+                            <connections>
+                                <action selector="AddTask:" destination="J4E-7b-YyJ" id="H86-BV-K89"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="To-do-list" id="cGf-WF-ZHD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WWQ-j8-0qW">
                             <connections>
-                                <action selector="AddTask:" destination="J4E-7b-YyJ" id="3g1-d8-tAo"/>
+                                <action selector="addTask:" destination="J4E-7b-YyJ" id="PHG-l7-M1p"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVH-C6-6SI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,7 +14,7 @@ class TableViewController: UITableViewController {
     
     @IBAction func addTask(_ sender: UIBarButtonItem) {
         let ac = UIAlertController(title: "Add Task", message: "add new task", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "ok", style: .default) { action in
+        let ok = UIAlertAction(title: "Ok", style: .default) { action in
             let textField = ac.textFields?[0]
             self.toDoItems.insert((textField?.text)!, at: 0)
             self.tableView.reloadData()
